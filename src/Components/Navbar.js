@@ -7,9 +7,17 @@ const Navbar = () => {
 
   return (
     <div className="container-fluid">
-      <nav className="navbar bg-light">
+      <nav className="navbar">
         <div className="conta">
-          <h1>Middleware</h1>
+          <Link to="/">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVSvOghFxBzGHjxjIonjCPkueCl7JGW32gOg&s"
+              width="200px"
+              height="100px"
+              alt="logo"
+              className="logo"
+            />
+          </Link>
           <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
             ☰
           </button>
@@ -18,8 +26,9 @@ const Navbar = () => {
             <li><Link to="/contact">Contact</Link></li>
             <li><Link to="/about">About</Link></li>
             <li><Link to="/cart">Cart</Link></li>
+            {/* <li><Link to="/login">UserLogin</Link></li> */}
             <li><Link to="/signup">Signup</Link></li>
-            <li><Link to="/login">Login</Link></li>
+            <li><Link to="/admin">Admin</Link></li>  
           </ul>
         </div>
       </nav>

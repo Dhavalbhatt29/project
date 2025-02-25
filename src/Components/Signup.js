@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../App.css";
+import axios from "axios";
 
 const FormComponent = () => {
   const [formData, setFormData] = useState({
@@ -37,13 +38,10 @@ const FormComponent = () => {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
     if (validate()) {
-      alert("Form submitted successfully!");
-      console.log("Form data", formData);
-
-      // Optionally, reset the form after submission
+            // Optionally, reset the form after submission
       setFormData({
         Name: "",
         Email: "",
@@ -54,6 +52,9 @@ const FormComponent = () => {
         Password: "",
         ConfirmPassword: "",
       });
+      
+       const res = await axios.post("http://localhost:5000/api/today", formData);
+       console.log(res.data.data.data);
 
       setErrors({});
     }

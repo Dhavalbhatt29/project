@@ -1,38 +1,36 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom"; 
+import React, { useState, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import "../App.css";
-import axios from "axios";
 
-const LoginComponent = () => {
-  const [formData, setFormData] = useState({
-    email: "",
-    password: "",
-  });
+const AdminLogin = () => {
+  const [formData, setFormData] = useState({ email: "", password: "" });
 
+  const dispatch = useDispatch();
   const navigate = useNavigate();
+  const { loading, error, token } = useSelector((state) => state.auth);
+
+  useEffect(() => {
+    if (token) {
+      navigate("/frontend/src/Components/Home.js");
+    }
+  }, [token, navigate]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    try {
-      const res = await axios.post("http://localhost:5000/api/login", formData);
-      if (res.data.status) {
-        localStorage.setItem("token", res.data.data.token);
-        navigate("/admin/dashboard"); 
-      }
-    } catch (error) {
-      console.error("Login Error:", error);
-    }
+    if (!loading) dispatch( (formData));
   };
 
   return (
     <div className="container-fluid bgcolor">
       <div className="container">
-        <h1 className="title">Login</h1>
+        <h1 className="title">Admin Login</h1>
+        {error && <p className="error-text">{error}</p>}
         <form className="form" onSubmit={handleSubmit}>
           <div className="form-group">
             <label>Email</label>
@@ -58,8 +56,12 @@ const LoginComponent = () => {
             />
           </div>
 
-          <button type="submit" className="submit-button border-rounded">
-            Login
+          <button
+            type="submit"
+            className="submit-button border-rounded"
+            disabled={loading}
+          >
+            {loading ? "Logging in..." : "Login"}
           </button>
         </form>
       </div>
@@ -67,4 +69,4 @@ const LoginComponent = () => {
   );
 };
 
-export default LoginComponent;
+export default AdminLogin;
