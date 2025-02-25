@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import axios from "axios";
 
 const initialState = {
   user: null,
@@ -16,6 +17,19 @@ const userSlice = createSlice({
     },
   },
 });
+
+
+export const login = async(navigate, formData) => {
+  try {
+    const res = await axios.post("http://localhost:5000/api/login", formData);
+    if (res.data.status) {
+      localStorage.setItem("token", res.data.data.token);
+      navigate("/admin/dashboard"); 
+    }
+  } catch (error) {
+    console.error("Login Error:", error);
+  }
+}
 
 export const { setUser, clearUser } = userSlice.actions;
 export default userSlice.reducer;

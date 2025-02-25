@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import "../App.css";
+import { login } from "../Redux/Slice";
 
 const AdminLogin = () => {
   const [formData, setFormData] = useState({ email: "", password: "" });
@@ -12,7 +13,7 @@ const AdminLogin = () => {
 
   useEffect(() => {
     if (token) {
-      navigate("/frontend/src/Components/Home.js");
+      navigate("/admin/dashboard");
     }
   }, [token, navigate]);
 
@@ -23,7 +24,7 @@ const AdminLogin = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!loading) dispatch( (formData));
+    dispatch(login(navigate, formData));
   };
 
   return (
