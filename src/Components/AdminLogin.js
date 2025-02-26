@@ -15,7 +15,7 @@ const AdminLogin = () => {
     if (token) {
       navigate("/admin/dashboard");
     }
-  }, [token, navigate]);
+  }, [token, navigate]);  
 
   const handleChange = (e) => {
     const { name, value } = e.target;
