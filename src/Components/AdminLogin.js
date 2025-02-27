@@ -9,13 +9,13 @@ const AdminLogin = () => {
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const { loading, error, token } = useSelector((state) => state.auth);
+  const { loading, error } = useSelector((state) => state.auth);
 
-  useEffect(() => {
-    if (token) {
-      navigate("/admin/dashboard");
-    }
-  }, [token, navigate]);  
+  // useEffect(() => {
+  //   if (token) {
+  //     navigate("/admin/dashboard");
+  //   }
+  // }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -24,6 +24,8 @@ const AdminLogin = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log(formData);
+    
     dispatch(login(navigate, formData));
   };
 
@@ -32,7 +34,7 @@ const AdminLogin = () => {
       <div className="container">
         <h1 className="title">Admin Login</h1>
         {error && <p className="error-text">{error}</p>}
-        <form className="form" onSubmit={handleSubmit}>
+        
           <div className="form-group">
             <label>Email</label>
             <input
@@ -61,10 +63,11 @@ const AdminLogin = () => {
             type="submit"
             className="submit-button border-rounded"
             disabled={loading}
+            onClick={handleSubmit}
           >
             {loading ? "Logging in..." : "Login"}
           </button>
-        </form>
+        
       </div>
     </div>
   );
