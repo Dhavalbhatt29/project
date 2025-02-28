@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import "../App.css";
 import { login } from "../Redux/Slice";
-
+import axios from "axios";
 const AdminLogin = () => {
   const [formData, setFormData] = useState({ email: "", password: "" });
 
@@ -22,11 +22,10 @@ const AdminLogin = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
-    console.log(formData);
-    
-    dispatch(login(navigate, formData));
+    console.log(formData);    
+    dispatch(login(formData, navigate));
   };
 
   return (
