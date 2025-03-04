@@ -1,12 +1,14 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
 function Adminheader() {
   return (
     <>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container-fluid">
-          <Link className="navbar-brand" to="/">Navbar</Link> 
+          <Link className="navbar-brand" to="/">
+            Navbar
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -23,12 +25,12 @@ function Adminheader() {
               <li className="nav-item">
                 <Link className="nav-link active" aria-current="page" to="/">
                   Home
-                </Link> 
+                </Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/link">
                   Link
-                </Link> 
+                </Link>
               </li>
               <li className="nav-item dropdown">
                 <Link
@@ -39,17 +41,17 @@ function Adminheader() {
                   aria-expanded="false"
                 >
                   Dropdown
-                </Link> 
+                </Link>
                 <ul className="dropdown-menu">
                   <li>
                     <Link className="dropdown-item" to="/action">
                       Action
-                    </Link> 
+                    </Link>
                   </li>
                   <li>
                     <Link className="dropdown-item" to="/another-action">
                       Another action
-                    </Link> 
+                    </Link>
                   </li>
                   <li>
                     <hr className="dropdown-divider" />
@@ -57,14 +59,14 @@ function Adminheader() {
                   <li>
                     <Link className="dropdown-item" to="/something-else">
                       Something else here
-                    </Link> 
+                    </Link>
                   </li>
                 </ul>
               </li>
               <li className="nav-item">
                 <Link className="nav-link disabled" to="#" aria-disabled="true">
                   Disabled
-                </Link> 
+                </Link>
               </li>
             </ul>
             <form className="d-flex" role="search">

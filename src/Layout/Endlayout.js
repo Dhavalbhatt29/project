@@ -6,4 +6,4 @@ function endlayout() {
   )
 }
 
-export default endlayout 
+export default endlayout ;  

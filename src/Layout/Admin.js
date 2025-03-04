@@ -1,8 +1,16 @@
 import React from 'react'
+import Adminheader from '../Components/Adminheader'
+import AdminSidebar from '../Components/AdminSidebar'
+import Adminfooter from '../Components/Adminfooter'
 
 function Admin() {
   return (
-    <div>Admin</div>
+    <>   
+    <Adminheader />
+   <AdminSidebar />
+   <Adminfooter />
+   </>
+
   )
 }
 

@@ -13,7 +13,7 @@ import AdminDashboard from "./Components/admindashboard";
 function App() {
   return (
     <div className="App">
-      <Navbar />
+      <Navbar/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/contact" element={<Contact />} />

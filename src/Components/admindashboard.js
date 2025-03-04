@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom"; 
 import "../App.css";
 
 const AdminDashboard = () => {
@@ -8,35 +9,33 @@ const AdminDashboard = () => {
         <h2 className="sidebar-title">Admin Panel</h2>
         <ul className="sidebar-menu">
           <li>
-            <a href="#dashboard">Dashboard</a>
+            <Link to="#dashboard">Dashboard</Link> 
           </li>
           <li>
-            <a href="#users">Users</a>
+            <Link to="#users">Users</Link> 
           </li>
           <li>
-            <a href="#settings">Settings</a>
+            <Link to="#settings">Settings</Link> 
           </li>
           <li>
-            <a href="#reports">Reports</a>
+            <Link to="#reports">Reports</Link> 
           </li>
           <li>
-            <a href="#messages">Messages</a>
+            <Link to="#messages">Messages</Link> 
           </li>
           <li>
-            <a href="#orders">Orders</a>
+            <Link to="#orders">Orders</Link> 
           </li>
           <li>
-            <a href="#customers">Customers</a>
+            <Link to="#customers">Customers</Link> 
           </li>
           <li>
-            <a href="#logout">Logout</a>
+            <Link to="#logout">Logout</Link> 
           </li>
         </ul>
       </div>
 
-  
       <div className="main-content">
-      
         <header className="header">
           <h1>Admin Dashboard</h1>
         </header>
@@ -55,7 +54,6 @@ const AdminDashboard = () => {
             <p>56</p>
           </div>
         </div>
-
 
         <div className="recent-activity">
           <h2>Recent Activity</h2>
