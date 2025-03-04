@@ -1,17 +1,9 @@
-import React from 'react';
-import AdminNavbar from '../Components/AdminNavbar';  
-import AdminFooter from '../Components/AdminFooter';  
+import React from 'react'
 
-const AdminLayout = ({ children }) => {
+function Admin() {
   return (
-    <div>
-      <AdminNavbar /> 
-      <div className="admin-content">
-        {children}  
-      </div>
-      <AdminFooter /> 
-    </div>
-  );
-};
+    <div>Admin</div>
+  )
+}
 
-export default AdminLayout;
+export default Admin

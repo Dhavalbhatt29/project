@@ -1,17 +1,9 @@
-import React from 'react';
-import Navbar from '../Components/Navbar'; 
-import Footer from '../Components/Footer';  
+import React from 'react'
 
-const EndUserLayout = ({ children }) => {
+function endlayout() {
   return (
-    <div>
-      <Navbar />  
-      <div className="content">
-        {children}  
-      </div>
-      <Footer />  
-    </div>
-  );
-};
+    <div>endlayout</div>
+  )
+}
 
-export default EndUserLayout;
+export default endlayout 
