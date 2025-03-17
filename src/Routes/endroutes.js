@@ -15,9 +15,7 @@ function Endroutes() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/cart" element={<Cart/>} />
-        <Route path="/signup" element={<Signup/>} />
-    
-        <Route path="*" element={<h1>Not Found</h1>} />
+        <Route path="/signup" element={<Signup/>} />       
       </Route>
     </Routes>
   );

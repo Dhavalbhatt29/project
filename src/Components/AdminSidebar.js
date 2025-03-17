@@ -1,47 +1,38 @@
 import React from "react";
+import "../App.css";
+import { Link } from "react-router-dom";
 
 function AdminSidebar() {
   return (
-    <>
-      <div className="sidebar">
-        <>
-          <button
-            className="btn btn-primary"
-            type="button"
-            data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasScrolling"
-            aria-controls="offcanvasScrolling"
-          >
-            Enable body scrolling
-          </button>
-          <div
-            className="offcanvas offcanvas-start"
-            data-bs-scroll="true"
-            data-bs-backdrop="false"
-            tabIndex={-1}
-            id="offcanvasScrolling"
-            aria-labelledby="offcanvasScrollingLabel"
-          >
-            <div className="offcanvas-header">
-              <h5 className="offcanvas-title" id="offcanvasScrollingLabel">
-                Offcanvas with body scrolling
-              </h5>
-              <button
-                type="button"
-                className="btn-close"
-                data-bs-dismiss="offcanvas"
-                aria-label="Close"
-              />
-            </div>
-            <div className="offcanvas-body">
-              <p>
-                Try scrolling the rest of the page to see this option in action.
-              </p>
-            </div>
-          </div>
-        </>
-      </div>
-    </>
+    <div className="sidebar">
+      <h2 className="sidebar-title">Admin Panel</h2>
+      <ul className="sidebar-menu">
+        <li>
+          <Link to="/admin">Dashboard</Link>
+        </li>
+        <li>
+          <Link to="/admin/user">User</Link>
+        </li>
+        <li>
+          <Link to="/admin/setting">Setting</Link>
+        </li>
+        <li>
+          <Link to="/admin/report">Reports</Link>
+        </li>
+        <li>
+          <Link to="/admin/messages">Messages</Link>
+        </li>
+        <li>
+          <Link to="/admin/order">Orders</Link>
+        </li>
+        <li>
+          <Link to="/admin/customer">Customers</Link>
+        </li>
+        <li>
+          <Link to="/admin/logout">Logout</Link>
+        </li>
+      </ul>
+    </div>
   );
 }
 

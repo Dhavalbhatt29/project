@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom"; 
+import { Link } from "react-router-dom";
 import "../App.css";
 
 const AdminDashboard = () => {
@@ -9,28 +9,28 @@ const AdminDashboard = () => {
         <h2 className="sidebar-title">Admin Panel</h2>
         <ul className="sidebar-menu">
           <li>
-            <Link to="#dashboard">Dashboard</Link> 
+            <Link to="/">Dashboard</Link>
           </li>
           <li>
-            <Link to="#users">Users</Link> 
+            <Link to="/users">Users</Link>
           </li>
           <li>
-            <Link to="#settings">Settings</Link> 
+            <Link to="/settings">Settings</Link>
           </li>
           <li>
-            <Link to="#reports">Reports</Link> 
+            <Link to="/reports">Reports</Link>
           </li>
           <li>
-            <Link to="#messages">Messages</Link> 
+            <Link to="/messages">Messages</Link>
           </li>
           <li>
-            <Link to="#orders">Orders</Link> 
+            <Link to="/orders">Orders</Link>
           </li>
           <li>
-            <Link to="#customers">Customers</Link> 
+            <Link to="/customers">Customers</Link>
           </li>
           <li>
-            <Link to="#logout">Logout</Link> 
+            <Link to="/logout">Logout</Link>
           </li>
         </ul>
       </div>

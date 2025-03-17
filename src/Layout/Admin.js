@@ -1,16 +1,23 @@
 import React from "react";
-import Adminheader from "../Components/Adminheader";
 import AdminSidebar from "../Components/AdminSidebar";
-import Adminfooter from "../Components/Adminfooter";
 import { Outlet } from "react-router-dom";
+import Header from "../Components/Adminheader";
+import { Row, Col } from "react-bootstrap";
+import Footer from "../Components/Footer";
 
 function Admin() {
-  return (  
+  return (
     <>
-      <Adminheader />
-      <AdminSidebar />
-      <Outlet />
-      <Adminfooter />
+      <Row>
+        <Col xs={12}>
+          <AdminSidebar />
+        </Col>
+        <Col xs={12}>
+          <Header />
+          <Outlet />
+          <Footer />
+        </Col>
+      </Row>
     </>
   );
 }
