@@ -1,15 +1,15 @@
 import React from 'react';
-import '../App.css'; // Create this CSS file to style the page
+import '../App.css'; 
 
 function About() {
   return (
     <div className="about-container">
       <h1 className="about-title">About Us</h1>
-      
+
       <section className="about-section">
         <h2>Our Story</h2>
         <p>
-          We are a passionate team dedicated to providing the best online shopping experience. 
+          We are a passionate team dedicated to providing the best online shopping experience.
           Our company was founded in 2020 with the goal of revolutionizing the e-commerce space by offering top-notch products, unbeatable prices, and exceptional customer service.
         </p>
       </section>
@@ -17,7 +17,7 @@ function About() {
       <section className="about-section">
         <h2>Our Mission</h2>
         <p>
-          Our mission is simple: to offer high-quality products at affordable prices while ensuring a smooth and secure shopping experience. 
+          Our mission is simple: to offer high-quality products at affordable prices while ensuring a smooth and secure shopping experience.
           We believe in making online shopping easier, faster, and more enjoyable for everyone.
         </p>
       </section>
@@ -45,9 +45,7 @@ function About() {
 
       <section className="about-section">
         <h2>Contact Us</h2>
-        <p>
-          We'd love to hear from you! Reach out to us with any questions or feedback.
-        </p>
+        <p>We'd love to hear from you! Reach out to us with any questions or feedback.</p>
         <p>Email: <a href="mailto:contact@company.com">contact@company.com</a></p>
         <p>Phone: (123) 456-7890</p>
       </section>

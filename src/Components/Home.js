@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from 'axios';
 import "../App.css";
 
-const AdminDashboard = () => {
+const Home = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -42,4 +42,4 @@ const AdminDashboard = () => {
   );
 };
 
-export default AdminDashboard;
+export default Home;

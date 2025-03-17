@@ -1,9 +1,16 @@
 import React from 'react'
+import Navbar from '../Components/Navbar';
+import Footer from '../Components/Footer';
+import { Outlet } from 'react-router-dom';
 
-function endlayout() {
+function Endlayout() {
   return (
-    <div>endlayout</div>
+    <>
+      <Navbar />
+      <Outlet />
+      <Footer/>
+    </>
   )
 }
 
-export default endlayout ;  
+export default Endlayout ;  
