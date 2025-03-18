@@ -8,12 +8,12 @@ function AdminSidebar() {
       <h2 className="sidebar-title">Admin Panel</h2>
       <ul className="sidebar-menu">
         <li>
-          <Link to="/admin">Dashboard</Link>
+          <Link to="/admin">Dashboard</Link>  
         </li>
         <li>
           <Link to="/admin/user">User</Link>
         </li>
-        <li>
+        <li>  
           <Link to="/admin/setting">Setting</Link>
         </li>
         <li>

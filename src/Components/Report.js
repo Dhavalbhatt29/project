@@ -70,7 +70,7 @@ function Report() {
                 <td>20</td>
                 <td>-</td>
               </tr>
-              {/* Additional rows as needed */}
+             
             </tbody>
           </table>
         </section>

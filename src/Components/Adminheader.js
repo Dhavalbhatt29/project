@@ -6,63 +6,87 @@ const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <div className="custom-navbar">
-      <div className="container">
-        <Link className="logo" to="/">
-          Navbar
-        </Link>
-        <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
-          ☰
-        </button>
-        <div className={`menu ${menuOpen ? "open" : ""}`}>
-          <ul className="nav-list">
-            <li className="nav-item">
-              <Link className="nav-link" to="/">
-                Home
-              </Link>
+    <>
+    <nav className="navbar navbar-expand-lg bg-body-tertiary">
+  <div className="container-fluid">
+    <a className="text-body-emphasis" href="#">
+      Navbar
+    </a>
+    <button
+      className="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span className="navbar-toggler-icon" />
+    </button>
+    <div className="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+        <li className="nav-item">
+          <a className="nav-link active" aria-current="page" href="#">
+            Home
+          </a>
+        </li>
+        <li className="nav-item">
+          <a className="nav-link" href="#">
+            Link
+          </a>
+        </li>
+        <li className="nav-item dropdown">
+          <a
+            className="nav-link dropdown-toggle"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Dropdown
+          </a>
+          <ul className="dropdown-menu">
+            <li>
+              <a className="dropdown-item" href="#">
+                Action
+              </a>
             </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/link">
-                Link
-              </Link>
+            <li>
+              <a className="dropdown-item" href="#">
+                Another action
+              </a>
             </li>
-            <li className="nav-item dropdown">
-              <button className="dropdown-toggle">
-                Dropdown
-              </button>
-              <div className="dropdown-menu">
-                <Link className="dropdown-item" to="/action">
-                  Action
-                </Link>
-                <Link className="dropdown-item" to="/another-action">
-                  Another action
-                </Link>
-                <hr />
-                <Link className="dropdown-item" to="/something-else">
-                  Something else here
-                </Link>
-              </div>
+            <li>
+              <hr className="dropdown-divider" />
             </li>
-            <li className="nav-item">
-              <Link className="nav-link disabled" to="#" aria-disabled="true">
-                Disabled
-              </Link>
+            <li>
+              <a className="dropdown-item" href="#">
+                Something else here
+              </a>
             </li>
           </ul>
-          <form className="search-form">
-            <input
-              className="search-input"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button className="search-btn" type="submit">
-              Search
-            </button>
-          </form>
-        </div>
-      </div>
+        </li>
+        <li className="nav-item">
+          <a className="nav-link disabled" aria-disabled="true">
+            Disabled
+          </a>
+        </li>
+      </ul>
+      <form className="d-flex" role="search">
+        <input
+          className="form-control me-2"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+        />
+        <button className="btn btn-outline-success" type="submit">
+          Search
+        </button>
+      </form>
     </div>
+  </div>
+</nav>
+</>
   );
 };
 

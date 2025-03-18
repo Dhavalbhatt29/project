@@ -1,20 +1,24 @@
 import React from "react";
+import '../App.css';
 
 function Adminfooter() {
   return (
-    <>
-      <div className="card">
-        <div className="card-header">Quote</div>
-        <div className="card-body">
-          <blockquote className="blockquote mb-0">
-            <p>A well-known quote, contained in a blockquote element.</p>
-            <footer className="blockquote-footer">
-              Someone famous in <cite title="Source Title">Source Title</cite>
-            </footer>
+    <footer className="admin-footer ">
+      <div className="quote-card">
+        <div className="quote-header">
+          <h3>Inspirational Quote</h3>
+        </div>
+        <div className="quote-body">
+          <blockquote className="quote-text">
+            <p>"The only way to do great work is to love what you do."</p>
           </blockquote>
+          <footer className="quote-footer">
+            <p>- Steve Jobs</p>
+            <cite>Source: Steve Jobs' speech</cite>
+          </footer>
         </div>
       </div>
-    </>
+    </footer>
   );
 }
 

@@ -15,8 +15,8 @@ function Adminroute() {
   return (
     <Routes>
       <Route path="/admin" element={<Admin />}>
-        <Route index element={<AdminDashboard />} />
-        {/* <Route path="/admin/dashboard" element={<Dashboard />} /> */}
+        {/* <Route index element={<AdminDashboard />} /> */}
+        <Route index element={<Dashboard />} />
         <Route path="/admin/user" element={<User />} />
         <Route path="/admin/setting" element={<Setting />} />
         <Route path="/admin/report" element={<Report />} />
@@ -24,7 +24,7 @@ function Adminroute() {
         <Route path="/admin/order" element={<Order />} />
         <Route path="/admin/customer" element={<Customer />} />
         <Route path="/admin/logout" element={<Logout />} />
-      </Route>
+      </Route>  
     </Routes>
   );
 }
