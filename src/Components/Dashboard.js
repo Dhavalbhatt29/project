@@ -1,6 +1,6 @@
 import React from 'react';
 import '../App.css';  
-
+  
 function Dashboard() {
   return (
     <>
@@ -11,7 +11,7 @@ function Dashboard() {
       <main className="main-content">
         <section>
           <h2>Overview</h2>
-          <p>This is an overview of your activity and stats.</p>
+          <>This is an overview of your activity and stats.</>
         </section>
         <section>
           <h2>Analytics</h2>
@@ -19,8 +19,8 @@ function Dashboard() {
         </section>
         <section>
           <h2>Recent Activity</h2>
-          <p>Check out recent activity and updates here.</p>
-        </section>
+          <p>Chepck out recent activity and updates here.</p>
+        </section> 
       </main>
     </div>
     </>
