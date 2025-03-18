@@ -3,7 +3,7 @@ import '../App.css';
 
 function Adminfooter() {
   return (
-    <footer className="admin-footer ">
+    <footer className="admin-footer">
       <div className="quote-card">
         <div className="quote-header">
           <h3>Inspirational Quote</h3>

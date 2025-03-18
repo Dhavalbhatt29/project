@@ -1,7 +1,6 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Admin from "../Layout/Admin";
-import AdminDashboard from "../Components/admindashboard";
 import Dashboard from "../Components/Dashboard";
 import User from "../Components/User";
 import Setting from "../Components/Setting";
@@ -15,7 +14,6 @@ function Adminroute() {
   return (
     <Routes>
       <Route path="/admin" element={<Admin />}>
-        {/* <Route index element={<AdminDashboard />} /> */}
         <Route index element={<Dashboard />} />
         <Route path="/admin/user" element={<User />} />
         <Route path="/admin/setting" element={<Setting />} />

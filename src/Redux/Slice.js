@@ -24,8 +24,8 @@ export const login = (formData, navigate) => async () => {
 
     if (res.data.status) {
       localStorage.setItem("token", res.data.data.token);
-      navigate("/admin/dashboard");
-      console.log(res.data.data.token);
+      navigate("/admin");
+      // console.log(res.data.data.token);
     }
   } catch (error) {
     console.error("Login Error:", error);

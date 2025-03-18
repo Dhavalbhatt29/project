@@ -3,6 +3,7 @@ import '../App.css';
 
 function Dashboard() {
   return (
+    <>
     <div className="dashboard-container">
       <header className="dashboard-header">
         <h1>Welcome to Your Dashboard</h1>
@@ -22,6 +23,7 @@ function Dashboard() {
         </section>
       </main>
     </div>
+    </>
   );
 }
 
