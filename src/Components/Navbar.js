@@ -1,9 +1,20 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../App.css";
+import LoginModal from "./Login";
+import SignupModal from "./Signup"; 
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [modalType, setModalType] = useState(null); // Track which modal to show
+
+  const openModal = (type) => {
+    setModalType(type); // Set the modal type to either "login" or "signup"
+  };
+
+  const closeModal = () => {
+    setModalType(null); // Close the modal by setting modalType to null
+  };
 
   return (
     <nav className="navbar">
@@ -24,10 +35,18 @@ const Navbar = () => {
           <li><Link to="/contact">Contact</Link></li>
           <li><Link to="/about">About</Link></li>
           <li><Link to="/cart">Cart</Link></li>
-          <li><Link to="/login">Login</Link></li>
-          <li><Link to="/signup">Signup</Link></li>
+          <li>
+            <Link to="#" onClick={() => openModal('login')}>Login</Link>
+          </li>
+          <li>
+            <Link to="#" onClick={() => openModal('signup')}>Signup</Link>
+          </li>
         </ul>
       </div>
+
+      {/* Conditionally render either LoginModal or SignupModal */}
+      {modalType === 'login' && <LoginModal closeModal={closeModal} />}
+      {modalType === 'signup' && <SignupModal closeModal={closeModal} />}
     </nav>
   );
 };
