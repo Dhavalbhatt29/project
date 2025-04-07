@@ -1,12 +1,16 @@
 import React from 'react';
 import '../App.css';
+import { useNavigate } from 'react-router-dom';
+
 
 function Logout() {
   const handleLogout = () => {
    
     localStorage.removeItem('authToken');
+
   
   };
+  
 
   return (
     <div className="logout-container">

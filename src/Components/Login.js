@@ -1,13 +1,15 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { useDispatch} from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { showToast } from "../Redux/Slice/Toastslice";
+import { setUser } from "../Redux/Slice/Slice";
 
 const LoginModal = ({ closeModal }) => {
+  const auth = useSelector((state) => state.auth.auth);
   const [formData, setFormData] = useState({
-    email: "",
-    password: "",
+    email: "easyskill1234@gmail.com",
+    password: "easyskill1234",
   });
 
   const navigate = useNavigate();
@@ -24,8 +26,9 @@ const LoginModal = ({ closeModal }) => {
       const res = await axios.post("http://localhost:5000/api/login", formData);
       if (res.data.status) {
         localStorage.setItem("token", res.data.data.token);
-        navigate("/admin");
+        // navigate("/admin");
         closeModal();
+        dispatch(setUser(res.data.data.data));
         dispatch(showToast({ message: "Login Successfull", type: "success" }));
       }
     } catch (error) {
@@ -57,7 +60,7 @@ const LoginModal = ({ closeModal }) => {
                 name="email"
                 className="form-control"
                 value={formData.email}
-                onChange={handleChange} 
+                onChange={handleChange}
                 required
               />
             </div>
@@ -73,7 +76,6 @@ const LoginModal = ({ closeModal }) => {
                 required
               />
             </div>
-
             <button type="submit" className="submit-button border-rounded">
               Login
             </button>

@@ -2,11 +2,11 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const toastSlice = createSlice({
   name: 'toast',
-  intitialState: {
+  initialState: {
     message: '',
     type: '',
   },
-  reducer: {
+  reducers: {
     showToast(state, action) {
       state.message = action.payload.message;
       state.type = action.payload.type;
