@@ -12,7 +12,7 @@ const LoginModal = ({ closeModal }) => {
     password: "easyskill1234",
   });
 
-  const navigate = useNavigate();
+  const navigate = useNavigate();   
   const dispatch = useDispatch();
 
   const handleChange = (e) => {
