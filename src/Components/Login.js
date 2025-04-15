@@ -26,7 +26,7 @@ const LoginModal = ({ closeModal }) => {
       const res = await axios.post("http://localhost:5000/api/login", formData);
       if (res.data.status) {
         localStorage.setItem("token", res.data.data.token);
-        // navigate("/admin");
+        navigate("/admin");
         closeModal();
         dispatch(setUser(res.data.data.data));
         dispatch(showToast({ message: "Login Successfull", type: "success" }));

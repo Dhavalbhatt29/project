@@ -17,7 +17,7 @@ function AdminSidebar() {
           <Link to="/admin/setting">Setting</Link>
         </li>
         <li>
-          <Link to="/admin/report">Reports</Link>
+          <Link to="/admin/report">Product</Link>
         </li>
         <li>
           <Link to="/admin/messages">Messages</Link>

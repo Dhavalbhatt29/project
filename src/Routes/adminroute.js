@@ -4,7 +4,7 @@ import Admin from "../Layout/Admin";
 import Dashboard from "../Components/Dashboard";
 import User from "../Components/User";
 import Setting from "../Components/Setting";
-import Report from "../Components/Report";
+import Report from "../Components/Product";
 import Messages from "../Components/Messages";
 import Order from "../Components/Order";
 import Customer from "../Components/Customer";
