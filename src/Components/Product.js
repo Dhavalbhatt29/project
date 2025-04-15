@@ -39,7 +39,6 @@ function AddProduct() {
     });
   };
 
-  // Upload multiple images to server
   const handleUpload = async () => {
     if (selectedFiles.length === 0) {
       alert("Please select images to upload.");
