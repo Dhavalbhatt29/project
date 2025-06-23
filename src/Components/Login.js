@@ -23,13 +23,15 @@ const LoginModal = ({ closeModal }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:5000/api/login", formData);
+      const res = await axios.post("http://localhost:5000/api/login", 
+        formData);
       if (res.data.status) {
         localStorage.setItem("token", res.data.data.token);
         navigate("/admin");
         closeModal();
         dispatch(setUser(res.data.data.data));
-        dispatch(showToast({ message: "Login Successfull", type: "success" }));
+        dispatch(showToast({ message: "Login Successfull", 
+          type: "success" }));
       }
     } catch (error) {
       console.error("Login Error:", error);
@@ -44,7 +46,8 @@ const LoginModal = ({ closeModal }) => {
       style={{ display: "block" }}
     >
       <div
-        className="modal-dialog modal-dialog-centered modal-dialog-scrollable"
+        className="modal-dialog modal-dialog-centered
+         modal-dialog-scrollable"
         role="document"
       >
         <div className="modal-content">
